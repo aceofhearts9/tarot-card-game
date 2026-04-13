@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://4wh536sg5eld"]
+
+[ext_resource type="Texture2D" uid="uid://bqsbuosu4n567" path="res://Sprites/Card Backs/back_of_card_2.png" id="1_dd0t8"]
+[ext_resource type="Script" uid="uid://c1vmhwym3an7d" path="res://Scripts/card_slot.gd" id="1_nfi2q"]
+[ext_resource type="Texture2D" uid="uid://dtap22u4o8ltd" path="res://Sprites/Card Backs/card-backs.png" id="2_nfi2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oeeh2"]
+size = Vector2(170, 236)
+
+[node name="CardSlot" type="Node2D" unique_id=1916598667]
+z_index = -2
+script = ExtResource("1_nfi2q")
+
+[node name="CardSlotBackground" type="Sprite2D" parent="." unique_id=1970525843]
+modulate = Color(0, 0, 0, 0.49803922)
+scale = Vector2(3, 3)
+texture = ExtResource("1_dd0t8")
+
+[node name="CardSlotImage" type="Sprite2D" parent="." unique_id=1500325256]
+modulate = Color(0.78775924, 0.78775924, 0.78775924, 1)
+scale = Vector2(1.753, 1.9)
+texture = ExtResource("2_nfi2q")
+region_enabled = true
+region_rect = Rect2(344, 140, 85, 109)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=442173180]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1355458965]
+shape = SubResource("RectangleShape2D_oeeh2")
