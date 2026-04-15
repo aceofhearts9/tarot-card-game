@@ -34,11 +34,20 @@ color = Color(0, 0, 0, 0.54901963)
 [node name="Ability" type="RichTextLabel" parent="." unique_id=491993592]
 z_index = 1
 offset_left = 97.0
-offset_top = -115.0
+offset_top = -66.0
 offset_right = 239.0
 offset_bottom = 68.0
 mouse_filter = 2
-text = "Default text"
+text = "Default ability text"
+
+[node name="Name" type="RichTextLabel" parent="." unique_id=610490661]
+z_index = 1
+offset_left = 97.0
+offset_top = -114.0
+offset_right = 239.0
+offset_bottom = -67.0
+theme_override_colors/default_color = Color(0.48060995, 0.7659086, 0.88783497, 1)
+text = "Default card name"
 
 [node name="ShowAbilityArea" type="Area2D" parent="." unique_id=1717209321]
 

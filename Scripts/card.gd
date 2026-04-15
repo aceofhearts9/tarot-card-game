@@ -7,6 +7,7 @@ var hand_position
 var card_slot_card_is_in
 
 var ability_script
+@export var ability: CardAbility
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,10 +17,12 @@ func _ready() -> void:
 func show_ability_text():
 	$Ability.visible = true
 	$AbilityBackground.visible = true
+	$Name.visible = true
 
 func hide_ability_text():
 	$Ability.visible = false
 	$AbilityBackground.visible = false
+	$Name.visible = false
 
 func _on_area_2d_mouse_entered() -> void:
 	emit_signal("hovered", self)

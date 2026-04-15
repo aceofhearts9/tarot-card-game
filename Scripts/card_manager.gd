@@ -45,8 +45,9 @@ func finish_drag():
 		card_being_dragged.position = card_slot_found.position
 		card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
 		card_slot_found.card_in_slot = true
-		card_being_dragged.ability_script.trigger_ability()
+		card_being_dragged.ability.on_play()
 	else:
+		# Card dropped anywhere else, return back to hand
 		player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)
 	card_being_dragged = null
 
@@ -56,15 +57,18 @@ func connect_card_signals(card):
 
 func on_left_click_released():
 	if card_being_dragged:
+		# Card being dragged by the mouse is let go of
 		card_being_dragged.hide_ability_text()
 		finish_drag()
 
 func on_hovered_over_card(card):
 	if !is_hovering_on_card:
+		# 
 		is_hovering_on_card = true
 		highlight_card(card, true)
 	
 func on_hovered_off_card(card):
+	print("Hovered off card")
 	if !card.card_slot_card_is_in && !card_being_dragged:
 		highlight_card(card, false)
 		var new_card_hovered = raycast_check_for_card()

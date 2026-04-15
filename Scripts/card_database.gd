@@ -1,4 +1,4 @@
-const CARDS =  { # Card name, Number, Suit, Ability script, Ability text
+const CARDS =  { # Card name, Number, Suit, Ability, Ability text
 	"the_fool" : ["The Fool", 0, "Major", null, null],
 	"the_magician" : ["The Magician", 1, "Major", null, null],
 	"the_high_priestess" : ["The High Priestess", 2, "Major", null, null],

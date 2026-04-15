@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cavj26wad45r5"]
 
 [ext_resource type="Script" uid="uid://b27sgoot7or5h" path="res://Scripts/card_manager.gd" id="1_bo1nx"]
+[ext_resource type="Script" uid="uid://d4galeh8l4g0t" path="res://Scripts/card_slot_spread.gd" id="2_6bp64"]
 [ext_resource type="PackedScene" uid="uid://4wh536sg5eld" path="res://Scenes/card_slot.tscn" id="3_8gbba"]
 [ext_resource type="Script" uid="uid://cv14wvbpi2tuw" path="res://Scripts/player_hand.gd" id="3_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://bqsbuosu4n567" path="res://Sprites/Card Backs/back_of_card_2.png" id="4_jjvhh"]
@@ -15,25 +16,31 @@ size = Vector2(170, 236)
 [node name="CardManager" type="Node2D" parent="." unique_id=2139592804]
 script = ExtResource("1_bo1nx")
 
-[node name="CardSlots" type="Node2D" parent="." unique_id=1885018679]
+[node name="CardSlotSpread" type="Node2D" parent="." unique_id=1885018679]
+script = ExtResource("2_6bp64")
 
-[node name="CardSlot" parent="CardSlots" unique_id=1916598667 instance=ExtResource("3_8gbba")]
+[node name="CardSlot" parent="CardSlotSpread" unique_id=1916598667 instance=ExtResource("3_8gbba")]
+visible = false
 position = Vector2(960, 620)
 scale = Vector2(0.8, 0.8)
 
-[node name="CardSlot2" parent="CardSlots" unique_id=1362016653 instance=ExtResource("3_8gbba")]
+[node name="CardSlot2" parent="CardSlotSpread" unique_id=1362016653 instance=ExtResource("3_8gbba")]
+visible = false
 position = Vector2(960.00006, 421.00003)
 scale = Vector2(0.8, 0.8)
 
-[node name="CardSlot3" parent="CardSlots" unique_id=1201822567 instance=ExtResource("3_8gbba")]
+[node name="CardSlot3" parent="CardSlotSpread" unique_id=1201822567 instance=ExtResource("3_8gbba")]
+visible = false
 position = Vector2(960, 222)
 scale = Vector2(0.8, 0.8)
 
-[node name="CardSlot4" parent="CardSlots" unique_id=1142713718 instance=ExtResource("3_8gbba")]
+[node name="CardSlot4" parent="CardSlotSpread" unique_id=1142713718 instance=ExtResource("3_8gbba")]
+visible = false
 position = Vector2(814.00006, 421.00003)
 scale = Vector2(0.8, 0.8)
 
-[node name="CardSlot5" parent="CardSlots" unique_id=814062190 instance=ExtResource("3_8gbba")]
+[node name="CardSlot5" parent="CardSlotSpread" unique_id=814062190 instance=ExtResource("3_8gbba")]
+visible = false
 position = Vector2(1106, 421)
 scale = Vector2(0.8, 0.8)
 

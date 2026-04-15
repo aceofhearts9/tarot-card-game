@@ -35,6 +35,7 @@ func draw_card():
 		"/" + card_drawn + ".png")
 	new_card.get_node("CardImage").texture = load(card_image_path)
 	new_card.get_node("Ability").text = card_database_reference.CARDS[card_drawn][4]
+	new_card.get_node("Name").text = card_database_reference.CARDS[card_drawn][0]
 	var new_card_ability_script_path = card_database_reference.CARDS[card_drawn][3]
 	if new_card_ability_script_path:
 		new_card.ability_script = load(new_card_ability_script_path).new()
